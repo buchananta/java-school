@@ -32,10 +32,10 @@ public class Swagger2Config
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors
-                        .basePackage("com.lambdaschool.schools"))
-                .paths(PathSelectors.regex("/.*"))
-                .build()
-                .apiInfo(apiEndPointsInfo());
+                        .any())
+                .paths(PathSelectors.any())
+                .build();
+//                .apiInfo(apiEndPointsInfo());
     }
 
     /**
@@ -43,16 +43,16 @@ public class Swagger2Config
      *
      * @return ApiInfo a Swagger object containing identification information for this application
      */
-    private ApiInfo apiEndPointsInfo()
-    {
-        return new ApiInfoBuilder().title("User Model Example")
-                .description("User Model Example")
-                .contact(new Contact("Trevor Buchanan",
-                        "http://www.trevorbuchanan.com",
-                        "trevor@trevorbuchanan.com"))
-                .license("MIT")
-                .licenseUrl("https://github.com/LambdaSchool/java-usermodel/blob/master/LICENSE")
-                .version("1.0.0")
-                .build();
-    }
+//    private ApiInfo apiEndPointsInfo()
+//    {
+//        return new ApiInfoBuilder().title("User Model Example")
+//                .description("User Model Example")
+//                .contact(new Contact("Trevor Buchanan",
+//                        "http://www.trevorbuchanan.com",
+//                        "trevor@trevorbuchanan.com"))
+//                .license("MIT")
+//                .licenseUrl("https://github.com/LambdaSchool/java-usermodel/blob/master/LICENSE")
+//                .version("1.0.0")
+//                .build();
+//    }
 }
